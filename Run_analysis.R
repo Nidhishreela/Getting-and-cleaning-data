@@ -71,3 +71,5 @@ names(step2_data)
 # final step
 final_Data <- step2_data %>% group_by(subject,activity) %>% summarise_all(funs(mean))
 final_Data
+
+write.table(final_Data,'final_data.txt',row.names = FALSE)
